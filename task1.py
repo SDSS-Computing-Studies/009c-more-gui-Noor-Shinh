@@ -13,7 +13,7 @@ def triangle():
         b=int(b)
         c=int(c)
         s=(a+b+c)/2
-        A=math.sqrt(s(s-a)(s-b)(s-c))
+        A=math.sqrt(s*(s-a)*(s-b)*(s-c))
         
     else:
         b=int(b)
