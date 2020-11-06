@@ -6,20 +6,23 @@ import math
 def triangle():
     a=a1.get()
     h=a2.get()
-    b=a3.get()
-    c=a4.get()
-    if h=="":
+    b=a4.get()
+    c=a3.get()
+    if h=="" and a!= "" and b!= "" and c!= "":
         a=int(a)
         b=int(b)
         c=int(c)
         s=(a+b+c)/2
         A=math.sqrt(s*(s-a)*(s-b)*(s-c))
-        
-    else:
+        A=("The Area is "+str(abs(A)))
+    elif h!="" and b!="":
         b=int(b)
         h=int(h)
         A=(b*h/2)
-    eoutput.set("The Area is "+str(abs(A)))
+        A=("The Area is "+str(abs(A)))
+    else: 
+        A=("The area cannot be calculated\n from the given information")
+    eoutput.set(A)
 win=tk.Tk()
 win.title=("Triangle Calculator")
 eoutput=StringVar()
